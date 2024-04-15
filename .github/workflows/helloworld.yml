@@ -1,0 +1,17 @@
+name: Hello World Workflow
+
+on:
+  push:
+    branches:
+      - main  # Set this to the branch name you use for your main line of development
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # This workflow will run on the latest version of Ubuntu
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2  # This step uses the checkout action to clone your repository
+
+      - name: Print Hello World
+        run: echo "Hello World"  # This step runs a simple shell command to print "Hello World"
